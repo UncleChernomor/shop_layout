@@ -1,0 +1,294 @@
+.product-box { 
+    &-slider {
+        background-color: $bg-product-box;
+        height: 777px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: $shift;
+
+        &_img {
+            &-small {
+                display: none;
+            }
+        }
+
+        &-btn {
+            background-color: rgba(42, 42, 42, 0.15);
+            width: 47px;
+            height: 47px;
+            font-size: 30px;
+            
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+
+            &:hover {
+                cursor: pointer;
+                &:first-child {
+                    color: $color-active-icon;
+                }
+
+                &:last-child {
+                    color: $color-active-icon;
+                }
+            }
+        }
+    }
+
+    &-down {
+        text-align: center;
+        background-color: #fff;
+        //border: 1px solid #EAEAEA;
+
+        padding-bottom: 64px;
+
+        &-wrap {
+            border: 1px solid #EAEAEA;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: -$shift;
+            padding-top: $shift;  
+        }
+
+        &-header {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;            
+            color: $product-box-header;
+
+            margin-bottom: 12px;
+        }
+
+        &-line {
+            width: 63px;
+            border-top: 3px solid $color-main-strong;
+
+            margin-bottom: 12px;
+        }
+
+        &-header-details {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4D4D4D;  
+
+            margin-bottom: 48px;
+        }
+    }
+
+    &-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #5E5E5E;
+
+        width: 555px;
+        margin-bottom: 32px;
+    }
+
+    &-price {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #EF5B70;
+        border-bottom: 1px solid #EAEAEA;
+        width: 642px;
+
+        padding-bottom: 65px;
+        margin-bottom: 65px;
+
+    }
+
+    &-filter {
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+
+        @include list;
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 48px;
+        
+        &-item {
+            cursor: pointer;
+            margin-right: 23px;
+
+            &-details {
+                position: relative;
+            }
+
+            &-sum {
+                list-style-type: none;            
+
+                & .fas {
+                    margin-left: 10px;
+                }
+            }
+
+            &-choose {
+                background-color: #fff;
+
+                width: 95%;
+                position: absolute;
+                z-index: 100;  
+
+                box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.21);
+
+                padding: 0 0 11px 9px;
+                margin: 5px 0 0 5px;
+            }
+
+            &-label {
+                font-size: 14px;
+                line-height: 16px;
+                
+                color: #6F6E6E;
+
+                display: block;
+                text-align: left;
+                margin: 7px 2px 0 0;
+            }
+
+            &-check {
+                margin-right: 9px;
+            }
+        }
+    }
+
+    &-addcart {
+        color: $color-main-strong;
+        background-color: #fff;
+        border: 1px solid #FF6A6A;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-right: 56px;
+        margin-bottom: 64px;
+
+        transition: $transition-speed-slow;
+
+        & svg {
+            fill: $color-main-strong;
+            
+            margin-top: 15px;
+            margin-bottom: 9px;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: $color-main-strong;
+
+            transform: rotateX(360deg);
+
+            & svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-pad {
+        padding-bottom: 110px;    
+    }
+
+    .product-box {
+        &-slider {
+            height: 624px;
+            padding: 0;
+
+            &_img {
+                width: 466px;
+            }
+        }
+
+        &-down {
+
+            padding-bottom: 129px;
+            &-wrap {
+                margin-top: 0;
+                padding-top: 0;  
+            }
+
+            &-header {
+                margin-top: 65px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .product-pad {
+        padding-bottom: 45px;   
+    }
+    
+    .product-box {
+        &-slider {
+            &_img {
+                display: none;
+
+                &-small {
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+            }
+
+        }
+
+        &-down {
+
+            padding-bottom: 65px;
+
+            &-header-details {
+                margin-bottom: 32px;    
+            }
+        }
+
+        &-text {
+            width: 326px;
+        }
+
+        &-price {
+            width: 175px;
+            padding-bottom: 32px;
+            margin-bottom: 50px;
+        }
+
+        &-filter {
+            font-size: 10px;
+            line-height: 12px;
+            
+            margin-bottom: 65px;
+
+            &-item {
+                margin-right: 25px;
+
+                &-label {
+                    font-size: 11px;
+                    line-height: 13px;
+                    padding: 2px;
+                }
+    
+                &-check {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+}

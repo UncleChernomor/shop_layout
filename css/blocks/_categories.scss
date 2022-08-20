@@ -1,0 +1,128 @@
+.categories {
+    padding-bottom: 91px;
+    display: flex;
+}
+
+.categories-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 30px;
+}
+
+.categories-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.categories-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.categories-center-text-down {
+    text-align: center;
+}
+
+.categories-card-down {
+    background-image: url("../img/offer_for_accesories.jpg");
+    width: 1140px;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    &-link {
+        @include a-link;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.categories-card-header {
+    color: #fff;
+    font-weight: normal;
+    // font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+.categories-card-header-big {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #F16D7F;
+}
+
+@media (max-width: 1200px) {
+    .categories {
+        padding-bottom: 155px;
+
+        &-top {
+            padding: 20px 0 20px;
+        }
+
+        &-card-down {
+            width: 736px;
+            height: 116px;
+        }
+    }
+
+    .categories-card {
+
+        &-imgup {
+            width: 233px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .categories {
+        padding-bottom: 64px;
+
+        &-top {
+            padding: 64px 0 0 0;
+        }
+    }
+
+    .categories-top {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .categories-card {
+        margin-bottom: 32px;
+
+        &-imgup {
+            width: 343px;
+        }
+
+        &-imgdown {
+            display: none;
+        }
+    }
+
+    .categories-card-down {
+        background-image: url("../../img/offer_for_accesories.jpg");
+        width: 343px;
+        height: 111px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+
+}

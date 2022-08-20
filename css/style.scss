@@ -1,0 +1,81 @@
+@mixin list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin a-link {
+    text-decoration: none;
+    color:inherit;
+}
+
+@mixin a-link-pag {
+    @include a-link;
+    
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;  
+    
+    margin: 0 8px;
+    padding: 12px 0;
+}
+
+@import "../css/_variables";
+@import "../css/blocks/_header";
+@import "../css/blocks/_title_page";
+@import "../css/blocks/feedback";
+@import "../css/blocks/_footer";
+@import "../css/blocks/_promo";
+@import "../css/blocks/_categories";
+@import "../css/blocks/_products";
+@import "../css/blocks/_feature";
+@import "../css/blocks/_product_box";
+@import "../css/blocks/_registration";
+@import "../css/blocks/_cart";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.hidden {
+    position: absolute;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+    margin: -1;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 736px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 360px;
+    }  
+}

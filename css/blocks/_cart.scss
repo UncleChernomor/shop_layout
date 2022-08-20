@@ -1,0 +1,392 @@
+.cart-box {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 30px;
+    padding-bottom: 128px;
+
+    &-item {
+        width: 360px;
+
+        &_address-header {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;            
+
+            padding: 18px 0 20px 0;
+        }
+
+        &_input-address {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #222222;
+
+            border: 1px solid $color-cart-border;
+            padding: 15px 17px;
+            margin-bottom: 20px;
+        }
+
+        // блок проверки Чека
+        &-check {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            background-color: #F5F3F3;
+            text-align: right;
+
+            padding-right: 37px;
+
+            &_subtotal {
+                font-size: 11px;
+                line-height: 13px;           
+                color: #4A4A4A;  
+                
+                padding-top: 39px;
+                padding-bottom: 12px;
+
+                &-price {
+                    padding-left: 25px;
+                }
+            }
+
+            &_grandtotal {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                
+                color: #222222;
+
+                &-price {
+                    font-weight: bold;
+                    color: $color-main-strong;
+
+                    padding-left: 25px;
+                    padding-right: 2px;
+                }
+            }
+
+            &-boxbtn {
+                width: 276px;
+                margin-right: 5px;
+            }
+
+            &_linecheck {
+                border-top: 1px solid $color-cart-border;
+
+                margin-top: 21px;
+                padding-top: 17px;
+            }
+
+            &_btncheck {
+                color: #fff;
+                background-color: $color-main;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+
+                border: 1px solid $color-main;
+                
+                padding: 16px 42px;
+                margin-bottom: 42px;
+
+                transition: $transition-speed;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: $color-cart-border;
+                    border-color: $color-cart-border;
+                }
+
+            }
+
+        }
+
+        // Кнопка адрес
+        &_btn-address {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+
+            color: $color-cart-border;
+            border: 1px solid $color-cart-border;
+            background-color: #fff;
+
+            width: 102px;
+            padding: 12px 14px;
+
+            transition: $transition-speed;
+
+            &:hover {
+                cursor: pointer;
+                color: #fff;
+                border-color: $color-active-icon;
+                background-color: $color-active-icon;
+            }
+        }
+
+        // блок формы адреса
+        &_formaddress {
+            margin-bottom: 57px;
+        }
+
+        &-products {
+            &-wrap {
+                width: 652px;
+                position: relative;
+                // border: 2px solid gold;
+            }
+
+            &_btnclose {
+                background-color: #fff;
+                width: 18px;
+                height: 18px;
+                border: 0;
+                
+                position: absolute;
+                right: 22px;
+                top: 33px;
+                // padding-left: 57px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }       
+
+        // карточка продукта
+        &_cardproduct {
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        
+            display: flex;
+            margin-bottom: 40px;
+        }    
+
+        &_img {
+            width: 262px;
+        }
+
+        &-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+
+            &_btnmanager {
+                background-color: #fff;
+                border: 1px solid #A4A4A4;
+                
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;               
+                
+                padding: 17px 40px;
+
+                transition: $transition-speed;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $color-active-icon;
+                    border-color: #fff;
+
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &_formaddress {
+            display: flex;
+            flex-direction: column;
+            // justify-content: start;
+        }
+
+        &-info {
+
+            width: 262px;
+            padding: 28px 22px 0 31px;
+
+            &_header {
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222; 
+
+                margin-bottom: 42px;
+            } 
+
+            &_desc {
+                font-size: 22px;
+                line-height: 26px;
+                color: #575757;  
+                
+                margin-bottom: 6px;
+            }
+
+            &_desc-price {                
+                color: $color-main-strong;                
+            }
+
+            &_count {
+                border: 1px solid #EAEAEA;
+                color: #656565;
+                text-align: center;
+                font-size: 18px;
+                width: 44px;
+
+                margin-left: 24px;
+                // height: 25px;     
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .cart-box {
+        flex-direction: column;
+
+        &-item {
+
+            display: flex;
+            justify-content:space-between;   
+            width: 100%;
+
+            margin-top: 80px;
+
+            &-check {
+                width: 360px;    
+            }
+
+            &_formaddress {
+                width: 360px;
+            }
+
+            &-btns {
+                justify-content: center;
+                gap: 49px;
+            }
+
+            &-products {
+                &-wrap {
+                    width: 734px;
+                }
+    
+                &_btnclose {                   
+                    position: absolute;
+                    right: 22px;
+                    top: 33px;
+                    // padding-left: 57px;
+                }
+            }
+
+            &_cardproduct {
+               // width: 734px;
+            }
+
+            &_address-header {
+                padding-top: 0;
+            }
+
+            &_formaddress {
+                margin-bottom: 0;
+            }
+
+            &-check {
+                margin: 39px 0 ;
+                padding-right: 34px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cart-box {
+
+        padding-bottom: 48px;
+        
+        &-item {
+            flex-direction: column;
+
+            &-info {
+
+                width: 201px;
+                padding: 13px 53px 27px 17px;
+
+                &_header {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin: 0 0 26px;
+                }
+
+                &_desc {
+                    font-size: 14px;
+                    line-height: 17px;
+
+                    margin-bottom: 4px;
+                }
+
+                &_count {
+                    width: 24px;
+                    height: 15;
+
+                    font-size: 10px;
+                    line-height: 12px;
+                    text-align: center;
+                }
+            }
+
+            &_img {
+                width: 144px;    
+            } 
+            
+            &-products {
+                &-wrap {
+                    width: 358px;
+                }
+    
+                &_btnclose {
+                    border: 0;
+                    
+                    position: absolute;
+                    right: 12px;
+                    top: 15px;
+                    // padding-left: 57px;
+        
+                    &-svg {
+                        width: 11px;
+                        height: 11px;
+                    }
+                }
+            }
+
+            &-btns {
+                display: flex;
+                justify-content: space-between;
+                
+                gap: 9px;
+                margin-top: 30px;
+
+    
+                &_btnmanager {         
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+
+                    color: #575757;             
+                    
+                    padding: 9px 18px;
+                }
+            }
+
+            &-check {
+                margin: 48px 0;
+            }
+        }
+        
+    }
+}

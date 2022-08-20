@@ -1,0 +1,100 @@
+/* 
+ * Страница Заголовок страниц с крошками
+ */
+
+.title-page {
+    background-color: #F8F3F4;  
+    margin-bottom: 34px;     
+}
+
+.title-page-header {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F16D7F;
+
+    padding: 60px 0 60px;
+}
+
+ .title-page-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 148px;
+}
+
+.breadcrumbs {
+	padding: 20px;
+	background-color: #F8F3F4;
+}
+.breadcrumbs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.breadcrumbs-item::before {
+  content: '/';
+  margin-right: 10px;
+}
+
+.breadcrumbs-item:first-child::before {
+  display: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+  transition: 0.2s;
+}
+
+.breadcrumbs-link--current {
+  font-weight: bold;
+  color: #F16D7F;
+}
+
+.breadcrumbs-link[href]:hover {
+  text-decoration: underline;
+  color: #F16D7F;
+}
+
+@media (max-width: 1200px) {
+   .title-page {
+     margin-bottom: 0px;
+   }
+}
+
+@media (max-width: 767px) {
+
+    .title-page {
+        
+        &-box {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &-header {
+            text-align: center;
+            padding: 24px 0 12px 0;
+
+            &_custom {
+                padding: 60px 0;
+            }
+        }
+    }
+
+    .breadcrumbs-item::before {
+        margin-right: 2px;
+    }
+
+    .breadcrumbs-list {
+        gap: 5px;
+      }
+
+}

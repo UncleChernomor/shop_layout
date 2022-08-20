@@ -1,0 +1,213 @@
+/* страница Регистрации */
+.registration-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 96px;
+}
+
+.registration-box-left {
+    width: 360px;
+}
+
+.reg-label {
+    display:block;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+
+    margin-bottom: 20px;
+}
+
+.reg-input {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+
+    border: 1px solid #A4A4A4;
+    
+    display: block;
+    width: 360px;
+    padding: 16px;
+    margin-bottom: 20px;
+
+}
+
+.reg-input::placeholder {
+    color:#B1B1B1;
+}
+
+.reg-input-pass {
+    margin-bottom: 15px;
+}
+
+.reg-radio-box {
+    display: flex;
+    margin: 30px 0 30px;
+}
+
+.reg-label-radio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    vertical-align:middle;
+
+    &_small {
+        display: none;
+    }
+}
+
+.reg-radio {
+    border: 1px solid #A4A4A4;
+    padding: 50px;
+}
+
+.reg-radio-text {
+    padding: 0 20px 0 10px;
+}
+
+.registration-box-left-text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+
+    padding-bottom: 40px;
+}
+
+.reg-button-submit {
+    background-color: #F16D7F;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+
+    padding: 16px 30px 16px 30px;
+
+    transition: 1s;
+    
+    &:hover {
+        background-color: #fff;
+        color: $color-active-icon;
+        transform: rotateY(360deg);
+    }
+}
+
+.fa-arrow-right {
+    margin-left: 20px;
+}
+
+.reg-box-right {
+    width: 652px;
+}
+
+.reg-box-right-header {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+
+    padding-bottom: 20px;
+}
+
+.reg-box-right-txt {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000; 
+    
+    padding-bottom: 20px;
+}
+
+.reg-box-right-list {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    list-style: none;
+    // list-style-image: url("../img/bird_list.svg");
+
+    color: #000000;  
+    
+    &-item {
+        list-style-position: inside;
+        background-image: url("../img/bird_list.svg");
+        background-repeat: no-repeat;
+        background-position: 0 7px;
+
+        &-text {
+            padding-left: 20px;
+            padding-top: 0;
+        }
+    }
+}
+
+.reg-box-right-list-item {   
+    padding-bottom: 16px;
+
+    &-text {
+        margin-left: 15px;
+        display: inline-block;
+    }
+}
+
+.fa-check {
+    padding-right: 23px;
+}
+
+@media (max-width:1200px){
+    .reg-box {
+        &-right {
+            width: 354px;
+
+            &-header {
+                width: 100%;
+                font-size: 16px;
+                line-height: 19px;
+                padding-bottom: 32px;
+            }
+
+            &-txt {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &-list {
+                list-style-position: outside;
+                padding-left: 28px;
+
+                &-item {
+                    background-position-y: 5px ;
+                    &-text {
+                        font-size: 16px;
+                        line-height: 19px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .reg-label-radio {  
+        &_small {
+            display: inline-block;
+        }
+    }
+    
+}
+
+@media (max-width:767px){
+    .registration-box {
+        flex-direction: column;
+
+        &-left {
+            margin-bottom: 40px;
+        }
+    }
+}

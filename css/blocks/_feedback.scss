@@ -1,0 +1,104 @@
+.feedback {
+    background: #ccc;
+    background-image: url("../img/bg_feedback.jpg");
+    background-size: cover;
+    padding-top: 95px;
+    padding-bottom: 150px;
+}
+
+.feedback-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-box-item {
+    font-size: 20px;
+    line-height: 24px;
+    color: #222224;
+    text-align: center;
+
+    width: 360px;
+    margin-right: 100px;
+}
+
+.feedback-box-left-txt {
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+.feedback-box-right-subscride {
+    font-size: 24px;
+    line-height: 40px;      
+    color: #222224;  
+    padding-top: 50px;
+}
+
+.feedback-box-right-txt {
+    font-size: 18px;
+    line-height: 30px;
+    color: #222224;    
+}
+
+.feedback-box-right-form {
+    display: flex;
+    justify-content: center;
+    
+    padding-top: 25px;
+}
+
+.feedback-box-right-email {
+    font-size: 14px;
+    line-height: 17px;   
+    color: #222224;
+    opacity: 0.67;
+    background: #E1E1E1;
+
+    border: 0;
+    border-radius: 30px 0 0 30px;
+    
+    padding: 20px;
+    width: 256px;
+}
+
+.feedback-box-right-button {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;  
+    color: #FFFFFF;
+    background: #F16D7F;
+    border: 0;
+    border-radius: 0 30px 30px 0;
+
+    flex-grow: 1;
+    padding: 20px;
+
+    transition: $transition-speed;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-active-icon;
+        background: #FFFFFF;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .feedback {
+        padding: 65px 0 92px;
+    }
+    
+    .feedback-box {
+        flex-direction: column;
+
+        &-item {
+            margin-bottom: 48px ;
+            margin-right: 0;
+        }
+
+        &-right-txt {
+            margin-bottom: 27px;      
+        }
+    }
+}
